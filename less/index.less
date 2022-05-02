@@ -1,0 +1,181 @@
+//导入base.less
+@import url(base.less);
+// 声明基准值
+@baseSize: 3.75vw;
+
+.suspension {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 0.53333vw 2.66667vw rgb(0 0 0 / 20%);
+
+    .m-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 (12 / @baseSize) 0 (18 / @baseSize);
+        height: (44 / @baseSize);
+
+        .logo {
+            i {
+                font-size: (28 / @baseSize);
+                color: #fb7299;
+            }
+        }
+
+        .right {
+            .search {
+                color: #ccc;
+
+                i {
+                    font-size: (22 / @baseSize);
+                }
+            }
+
+            display: flex;
+
+            .face {
+                width: (24 / @baseSize);
+                height: (24 / @baseSize);
+                // background-color: red;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 (20 / @baseSize);
+            }
+
+            .app-btn {
+                width: (72 / @baseSize);
+                height: (24 / @baseSize);
+                // background-color: purple;
+            }
+        }
+
+    }
+
+    // 频道模块
+    .channel-menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: (40 / @baseSize);
+        // background-color: purple;
+        border-bottom: 1px solid #e7e7e7;
+
+        .tabs {
+            flex: 1;
+            overflow: hidden;
+
+            .tabs-list {
+                display: flex;
+
+                a {
+                    padding: 0 (16 / @baseSize);
+                    // 不需要文字换行
+                    white-space: nowrap;
+                    font-size: (14 / @baseSize);
+                    height: (40 / @baseSize);
+                    line-height: (40 / @baseSize);
+                }
+
+                .line {
+                    position: absolute;
+                    bottom: -1px;
+                    left: (16 / @baseSize);
+                    width: (28 / @baseSize);
+                    height: (2 / @baseSize);
+                    background-color: #fb7299;
+                }
+            }
+        }
+
+        .after {
+            width: (40 / @baseSize);
+            height: (39 / @baseSize);
+            text-align: center;
+            background-color: #fff;
+
+            i {
+                line-height: (39 / @baseSize);
+                color: #ccc;
+                font-size: (20 / @baseSize);
+            }
+        }
+    }
+}
+
+.m-home {
+    padding: (85 / @baseSize) (5 / @baseSize) 0;
+
+    .video-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .video-item {
+            width: 50%;
+            padding: (8 / @baseSize) (5 / @baseSize);
+
+            .card {
+                position: relative;
+                height: (97 / @baseSize);
+
+                .count {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: (27 / @baseSize);
+                    // background-color: pink;
+                    padding: 0 (5 / @baseSize);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: (12 / @baseSize);
+                    color: #fff;
+                    background-image: linear-gradient(transparent, rgba(0, 0, 0, .6) 60%);
+                }
+
+                span {
+                    i {
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .title {
+                margin-top: (6 / @baseSize);
+                font-size: (12 / @baseSize);
+            }
+        }
+    }
+}
+
+// 底部模块
+.app {
+    position: fixed;
+    bottom: (30 / @baseSize);
+    left: 0;
+    width: 100%;
+    height: (38 / @baseSize);
+    // background-color: pink;
+
+    .btn-app {
+        margin: 0 (20 / @baseSize);
+        height: (38 / @baseSize);
+        background-color: #fb7299;
+        border-radius: (19 / @baseSize);
+        text-align: center;
+        line-height: (38 / @baseSize);
+        color: #fff;
+        font-size: (14 / @baseSize);
+        box-shadow: 0 0.53333vw 2.66667vw rgb(0 0 0 / 20%);
+
+        i {
+            padding-right: (5 / @baseSize);
+            font-size: (16 / @baseSize);
+        }
+    }
+}
